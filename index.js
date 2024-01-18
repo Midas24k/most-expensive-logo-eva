@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
 const logoModule = require('./lib/logo.js');
-const { Shapes, Triangle, Circle, Square } = require('./lib/shapes');
+const { Triangle, Circle, Square } = require('./lib/shapes.js');
 const questions = [
 
     {
@@ -14,7 +14,7 @@ const questions = [
 
     {
         type: 'input',
-        name: 'color text',
+        name: 'colorText',
         message: 'What color would you like text to be?',
     },
 
@@ -27,23 +27,26 @@ const questions = [
 
     {
         type: 'input',
-        name: 'color shape',
+        name: 'colorShape',
         message: 'What color would you like the shape to be?',
 
     },
 
 ];
 
-// Will trigger the inquirer pkg using a switch statement to call ths shape selected with txt
+// Will trigger the inquirer pkg using a switch statement to call the shape selected with txt
 function init() {
     inquirer.prompt(questions)
         .then((data) => {
             console.log('Making your new logo');
-            switch (`${data.Shapes}`) {
+            let logo
+            switch (`${data.shape}`) {
                 case 'Triangle':
                     console.log('making a triangle')
-                    const triangle = new Triangle(data.fill, data.stroke, data.strokeWidth, data.text, data.textColor, data.width)
-                    fs.writeFile("lib/output/final_product", triangle.renderTriangle, (err) => {
+                    const triangle = new Triangle(data.colorShape)
+                    data.shape = triangle
+                    logo = logoModule.createLogo(data)
+                    fs.writeFile("lib/output/final_product.svg", logo, (err) => {
                         if (err) {
                             console.log(err);
                         } else {
@@ -53,8 +56,10 @@ function init() {
                     break;
                 case 'Circle':
                     console.log('ooh we drawing a circle');
-                    const circle = new Circle(data.fill, data.stroke, data.strokeWidth, data.text, data.textColor, data.radius)
-                    fs.writeFile("lib/output/final_product", circle.renderCircle, (err) => {
+                    const circle = new Circle(data.colorShape)
+                    data.shape = circle
+                    logo = logoModule.createLogo(data)
+                    fs.writeFile("lib/output/final_product.svg", logo, (err) => {
                         if (err) {
                             console.log(err);
                         } else {
@@ -64,8 +69,10 @@ function init() {
                     break;
                 case 'Square':
                     console.log('L7 thats right a square');
-                    const square = new Square(data.fill, data.stroke, data.strokeWidth, data.text, data.textColor, data.width, data.width)
-                    fs.writeFile("lib/output/final_product", square.renderSquare, (err) => {
+                    const square = new Square(data.colorShape)
+                    data.shape = square
+                    logo = logoModule.createLogo(data)
+                    fs.writeFile("lib/output/final_product.svg", logo, (err) => {
                         if (err) {
                             console.log(err);
                         } else {
@@ -76,8 +83,8 @@ function init() {
             }
 
             // function to tie it all together
-            const logoResult = logoModule.createLogo(data);
-            fs.writeFileSync(path.join(process.cwd(), 'Mocklogo.svg'), logoResult)
+            // const logoResult = logoModule.createLogo(data);
+            // fs.writeFileSync(path.join(process.cwd(), 'Mocklogo.svg'), logoResult)
         });
 }
 // This will initialize the app

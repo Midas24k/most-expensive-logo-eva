@@ -42,7 +42,7 @@ function init() {
             let logo
             switch (`${data.shape}`) {
                 case 'Triangle':
-                    console.log('making a triangle')
+                    console.log('Making a triangle')
                     const triangle = new Triangle(data.colorShape)
                     data.shape = triangle
                     logo = logoModule.createLogo(data)
@@ -55,7 +55,7 @@ function init() {
                     });
                     break;
                 case 'Circle':
-                    console.log('ooh we drawing a circle');
+                    console.log('Ooh we are drawing a circle');
                     const circle = new Circle(data.colorShape)
                     data.shape = circle
                     logo = logoModule.createLogo(data)
@@ -82,9 +82,6 @@ function init() {
                     break;
             }
 
-            // function to tie it all together
-            // const logoResult = logoModule.createLogo(data);
-            // fs.writeFileSync(path.join(process.cwd(), 'Mocklogo.svg'), logoResult)
         });
 }
 // This will initialize the app

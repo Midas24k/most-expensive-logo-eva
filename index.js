@@ -1,6 +1,5 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const path = require('path');
 const logoModule = require('./lib/logo.js');
 const { Triangle, Circle, Square } = require('./lib/shapes.js');
 const questions = [

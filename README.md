@@ -25,7 +25,7 @@ JavaScript nodejs inquirer pkg and jest pkg
 
 Github Repo: https://github.com/Midas24k/most-expensive-logo-eva
 
-Video Tutorial:
+Video Tutorial: https://drive.google.com/file/d/1k6xespWfqDN4sYvSvujl_LyC4Ubs-mKF/view
 
 ## Usage:
 

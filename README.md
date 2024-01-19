@@ -4,7 +4,7 @@
 
 ## Description:
 
-This project is a commiand-line application built with node.js that take user inputs and generates them into a SVG file. The application promts the user for for text color and shape of the logo using the Inquirer package. Due to the many moving pieces of this application it also required tests to ensure that everything worked properly powered by the Jest package. A full tutorial will be added to the questions section.
+This project is a commiand-line application built with node.js that takes user inputs and generates a SVG file. The application prompts the user for the text, color, and shape of the logo using the Inquirer package. Due to the many moving pieces of this application, test were required to ensure that everything worked properly. The test were powered b using the Jest package in nodejs as well. A full tutorial will be added to the installation section as well as pictures of important pieces of the code.
 
 # Table of Contents
 
@@ -28,7 +28,7 @@ JavaScript nodejs inquirer pkg and jest pkg
 This app is a learning tool for learning nodejs. Focused concepts are building tests, understanding the render method and constrictures, understanding inquire pkg, and jest pkg.
    
 ## Contributors:
- N/A
+N/A
 
 ## Licensing
 

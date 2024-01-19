@@ -43,7 +43,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 ## Tests:
 
-yes
+Tested using nodejs "Jest" package. The test used for the render methods can be found on shapes.test.js and logo.test.js scripts sheets.
 
 ## Questions
 

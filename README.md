@@ -23,6 +23,10 @@ Roderick Hughey
 
 JavaScript nodejs inquirer pkg and jest pkg
 
+Github Repo: https://github.com/Midas24k/most-expensive-logo-eva
+
+Video Tutorial:
+
 ## Usage:
 
 This app is a learning tool for learning nodejs. Focused concepts are building tests, understanding the render method and constrictures, understanding inquire pkg, and jest pkg.
@@ -43,7 +47,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 ## Tests:
 
-Tested using nodejs "Jest" package. The test used for the render methods can be found on shapes.test.js and logo.test.js scripts sheets.
+Tested using nodejs "Jest" package. The test used for the render methods can be found on shapes.test.js and logo.test.js script sheets.
 
 ## Questions
 

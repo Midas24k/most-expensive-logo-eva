@@ -25,19 +25,18 @@ JavaScript nodejs inquirer pkg and jest pkg
 
 ## Usage:
 
-    This app is a learning tool for learning nodejs. Focused concepts are building test, understanding the render method amd constrictures, understanding inquire pkg, and jest.
-
+This app is a learning tool for learning nodejs. Focused concepts are building tests, understanding the render method and constrictures, understanding inquire pkg, and jest pkg.
+   
 ## Contributors:
-
-    N/A
+ N/A
 
 ## Licensing
 
-    This project is licensed under the Mit license.
+This project is licensed under the Mit license.
 
 ## Tests:
 
-    yes
+yes
 
 ## Questions
 
